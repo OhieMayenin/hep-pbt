@@ -8,6 +8,8 @@
 \usepackage{amsfonts}
 \usepackage{ragged2e}
 \usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{float}
 \linespread{1.5}                                                          
 
 \IEEEoverridecommandlockouts                              
@@ -48,7 +50,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BACKGROUND}
 
-\PARstart{M}{EDICAL} physics has played a huge role in the field of cancer treatment, with X dollars being invested into research since 1971. The traditional methods of cancer treatment include radiotherapy and chemotherapy, which are commonly used hand in hand with each other and have proven effective when treating many instances of cancer, but have found themselves limited in their effectiveness when treating rarer cancers.
+\PARstart{M}{EDICAL} physics has played a huge role in the field of cancer treatment, with X dollars being invested into research since 1971. Cancer statistics and references should go here to define the problem. 
+
+The traditional methods of cancer treatment include radiotherapy and chemotherapy, which are commonly used hand in hand with each other and have proven effective when treating many instances of cancer, but have found themselves limited in their effectiveness when treating rarer cancers.
 
 Chemotherapy involves the regular ingestion of drugs which target the tumour, but is generally limited in effectiveness. Thus, radiotherapy is prescribed to the patient in regular sessions, targeting radiation at the tumour to kill the tumour cells by apoptosis i.e. cell death. 
 
@@ -56,39 +60,43 @@ Radiotherapy is a traditional and effective method of cancer treatment, but in r
 
 \subsection{Proton Beam Therapy}
 
-Proton beam therapy consists of bombarding the target tumour with high energy protons, inducing cell death. Using protons rather than photons in traditional radiotherapy allows a dose to be delivered to a tumour in a sensitive region of tissue. Protons are positively charged hadrons, and like all charged particles follow the Bethe-Bloch formula, shown as Eq. 1, which describes their energy loss as they travel through matter.
+Proton beam therapy consists of bombarding the target tumour with high energy protons, inducing cell death. This diverges from traditional radiotherapy by using high energy protons instead of photons to deliver a dose to a target tumour in a sensitive region of tissue. 
 
+Protons are positively charged hadrons, and like all charged particles follow the Bethe equation, shown as Eq. 1 \cite{bethe}, which describes their energy loss as they travel through matter. The main physical mechanism of this loss could be explained here.
+
+% BETHE EQUATION
 \begin{equation}
-bethe = bloch
+\langle -\frac{dE}{dx} \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta ^2} \left[\frac{1}{2} \ln{\frac{2 m_e c^2 \beta^2 \gamma^2 W_{max}}{I^2}} - \beta^2 - \frac{\delta (\beta \gamma)}{2} \right]
 \end{equation}
 
-From this formula, the Bragg peak arises as shown in Figure 1, which depicts a sharp deposit of energy as the proton arrives at rest. A significantly larger amount of energy is lost at the Bragg peak compared to before as it travels at a faster velocity. This is compared to a photon which deposits energy as it travels fairly uniformly. This deposit of energy will be defined as a dose which is delivered to the tumour to kill the malignant cells due to ionisation. Proton beam therapy hence minimises the damage to healthy tissue and deposits the maximum dose to the tumour.
 
-\begin{figure}
+The Bragg peak arises from Eq. 1 as shown in Figure 1 \cite{Yock2004}, which depicts a sharp deposit of energy as the proton arrives at rest. A significantly larger amount of energy is lost at the Bragg peak compared to before as it travels at a faster velocity. This is compared to a photon which deposits energy as it travels fairly uniformly. This deposit of energy will be defined as a dose which is delivered to the tumour to kill the malignant cells by ionisation. Proton beam therapy hence minimises the damage to healthy tissue and deposits the maximum dose to the tumour.
+
+\begin{figure}[H]
     \centering
-    \includegraphics{}
-    \caption{Caption}
-    \label{fig:my_label}
+    \includegraphics[width=0.5\textwidth] {protonvsphoton.png}
+    
+    \caption{\label{fig:protonvsphoton}The relative dose i.e. the energy lost by the particle against depth in tissue for protons and X-ray photons. A single proton Bragg peak is represented by the grey line, X-rays by the dashed line, and a modified proton beam by the solid black line.}
 \end{figure}
 
-\vspace{2cm} % delete after adding figure
+The Bragg peak of a single photon is very sharp, so a combination of protons of varying energies are superposed to form the wider Bragg peak seen in Fig. 1, tailored to larger tumours while keeping the entry dose, defined as the dose delivered before the tumour, relatively low to preserve healthy tissue. This concept of superposing protons of different energies can be seen in Figure 2. In any case, it is more efficient than traditional radiotherapy represented by the 10MV X-rays, which have a larger entry dose than the proton beam.
+
+
 
 \subsection{Simulating the Beamline}
 
-The Clatterbridge Cancer Centre offers the only proton therapy in the UK and treats patients from across the UK and mainland Europe. Due to the sharpness of the Bragg peak, it is important that the dose is delivered very accurately and all uncertainties are minimised, to ensure a large dose isn't accidentally delivered to healthy tissue. 
+The Clatterbridge Cancer Centre offers the only proton therapy in the UK and treats patients from across the UK and mainland Europe. Due to the sharpness of the Bragg peak, it is important that the dose is delivered very accurately and that all uncertainties are minimised, to ensure a large dose isn't accidentally delivered to healthy tissue. 
 
-Simulating the proton beamline can help build confidence in this system and ensure correct dose delivery. It can also help those who want to prototype different geometries/setups by simulating the proton beam using research software developed at the forefront of high energy physics research, using a water phantom to model a patient. Such software such as Geant4 and BDSIM show how protons travel and interact with matter, and can prove useful to researchers as well as Clatterbridge staff.
-
-
-The proton therapy mechanism at Clatterbridge is made up of three parts: the cyclotron, the magnetic beamline, and the treatment beamline. The cyclotron is the source of the high energy protons, which then enter through the magnetic beamline, a complex configuration of magnetic elements which bend the protons towards the treatment beamline which leads directly to the patient in the treatment room.
+Simulating the proton beamline can help achieve this by ensuring correct dose delivery. It can also help those who want to prototype different geometries/setups by simulating the proton beam using research software developed at the forefront of high energy physics research. Software developed by CERN such as Geant4 and BDSIM can show how protons travel and interact with matter, and can prove useful to researchers who wish to model and simulate the Clatterbridge proton therapy beamline.
 
 
-
+The proton therapy mechanism at Clatterbridge is made up of three parts: the cyclotron, the magnetic beamline, and the treatment beamline. The cyclotron is the source of the high energy protons, which then enter through the magnetic beamline, a complex configuration of magnetic elements which bend the protons towards the treatment beamline which leads directly to the patient in the treatment room. The magnetic and treatment beamlines can be modelled virtually using Geant4 and BDSIM in order to run simulations.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PREVIOUS WORK}
 
+Research on proton beam therapy has been ongoing for X amount of years in the UCL HEP group. This project aims to continue the work of prior students and colleagues who have worked to establish an efficient methodology for simulating proton beamlines in Geant4/BDSIM by using geometries imported from CAD (computer-aided design) files, prepared by CAD software packages such as Autodesk.
 
 
 
