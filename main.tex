@@ -1,0 +1,141 @@
+\documentclass[a4paper, 12pt, conference]
+{ieeeconf}      % Use this line for a4
+
+\usepackage{graphicx}   
+\usepackage{setspace}
+\usepackage{url}       
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{ragged2e}
+\usepackage{placeins}
+\linespread{1.5}                                                          
+
+\IEEEoverridecommandlockouts                              
+                                                          
+                                                          
+\overrideIEEEmargins
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+     
+	{\scshape\Huge Simulating the Clatterbridge Cancer Centre Proton Therapy Beamline with GEANT4 \& BDSIM \par}
+	\vspace{0.5cm}
+	{\scshape\Large{Literature Review \& Project Outline\par}}
+	\vspace{1cm}
+	{\large\itshape Ohie S. Mayenin\par}
+    \vspace{1cm}
+    {\itshape First Supervisor: Dr. Simon Jolly\par}
+    {\itshape Second Supervisor: Prof. Ruben Saakyan\par}
+    \vspace{0.5cm}
+    {Department of Physics \& Astronomy, University College London\par}
+	\vspace{1cm}
+    %{\itshape Start Date: 02/10/2017\par}
+    %{\itshape End Date: 11/12/2017\par}
+    \vfill
+	Word Count: -
+	\vfill
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% no abstract needed
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{BACKGROUND}
+
+\PARstart{M}{EDICAL} physics has played a huge role in the field of cancer treatment, with X dollars being invested into research since 1971. The traditional methods of cancer treatment include radiotherapy and chemotherapy, which are commonly used hand in hand with each other and have proven effective when treating many instances of cancer, but have found themselves limited in their effectiveness when treating rarer cancers.
+
+Chemotherapy involves the regular ingestion of drugs which target the tumour, but is generally limited in effectiveness. Thus, radiotherapy is prescribed to the patient in regular sessions, targeting radiation at the tumour to kill the tumour cells by apoptosis i.e. cell death. 
+
+Radiotherapy is a traditional and effective method of cancer treatment, but in rarer cases of cancer where the tumour/malignancy is located in a region of very sensitive tissue such as the brain, eye or spinal cord, it is unsuitable. Damaging brain tissue can lead to severe side effects and permanent brain damage or blindness, which is a strong consideration as the victims of these rarer cancers tend to be young children. In this case, proton beam therapy can be administered, a cutting-edge method of cancer treatment which can only be currently delivered in one centre in the UK, namely the Clatterbridge Cancer Centre on the Wirral, close to the city of Liverpool.
+
+\subsection{Proton Beam Therapy}
+
+Proton beam therapy consists of bombarding the target tumour with high energy protons, inducing cell death. Using protons rather than photons in traditional radiotherapy allows a dose to be delivered to a tumour in a sensitive region of tissue. Protons are positively charged hadrons, and like all charged particles follow the Bethe-Bloch formula, shown as Eq. 1, which describes their energy loss as they travel through matter.
+
+\begin{equation}
+bethe = bloch
+\end{equation}
+
+From this formula, the Bragg peak arises as shown in Figure 1, which depicts a sharp deposit of energy as the proton arrives at rest. A significantly larger amount of energy is lost at the Bragg peak compared to before as it travels at a faster velocity. This is compared to a photon which deposits energy as it travels fairly uniformly. This deposit of energy will be defined as a dose which is delivered to the tumour to kill the malignant cells due to ionisation. Proton beam therapy hence minimises the damage to healthy tissue and deposits the maximum dose to the tumour.
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\vspace{2cm} % delete after adding figure
+
+\subsection{Simulating the Beamline}
+
+The Clatterbridge Cancer Centre offers the only proton therapy in the UK and treats patients from across the UK and mainland Europe. Due to the sharpness of the Bragg peak, it is important that the dose is delivered very accurately and all uncertainties are minimised, to ensure a large dose isn't accidentally delivered to healthy tissue. 
+
+Simulating the proton beamline can help build confidence in this system and ensure correct dose delivery. It can also help those who want to prototype different geometries/setups by simulating the proton beam using research software developed at the forefront of high energy physics research, using a water phantom to model a patient. Such software such as Geant4 and BDSIM show how protons travel and interact with matter, and can prove useful to researchers as well as Clatterbridge staff.
+
+
+The proton therapy mechanism at Clatterbridge is made up of three parts: the cyclotron, the magnetic beamline, and the treatment beamline. The cyclotron is the source of the high energy protons, which then enter through the magnetic beamline, a complex configuration of magnetic elements which bend the protons towards the treatment beamline which leads directly to the patient in the treatment room.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PREVIOUS WORK}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PROJECT OUTLINE}
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{APPENDIX}
+
+%An alternative form of Eq. 3 used to calculate the refractive index of paraffin.
+
+%$$ n_1^2 = \frac{1}{\sin^2{\theta}} \Big(1 + \frac{k_x^2 c^2}{(2\pi f)^2}\Big) $$ 
+
+%\section*{ACKNOWLEDGMENT}
+
+%Ohie Mayenin thanks his lab partners Judy Yu and Lucie Brichova for their collaboration on this experiment.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{hi.bib}
+
+
+
+\end{document}
