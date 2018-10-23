@@ -36,7 +36,8 @@
     %{\itshape Start Date: 02/10/2017\par}
     %{\itshape End Date: 11/12/2017\par}
     \vfill
-	Word Count: -
+	Word Count (including captions): 2373 \par
+	{Submitted 22/10/2018}
 	\vfill
 \end{titlepage}
 
@@ -49,13 +50,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BACKGROUND}
 
-\PARstart{R}{esearch} in the field of cancer treatment has seen great contribution from medical and high energy physicists, who together with oncologists have devised effective methods of cancer therapy over the last few decades. In particular, high energy medical physics research has accelerated in recent years, with two new proton beam therapy centres under construction in the UK at Christie in Manchester and UCLH in London, which together aim to treat 1500 patients a year \cite{hep}. 
+\PARstart{R}{esearch} in the field of cancer treatment has seen great contribution from medical and high energy physicists, who together with oncologists have devised effective methods of cancer therapy over the last few decades. In particular, high energy medical physics research has accelerated in recent years, with two new proton beam therapy centres under construction in the UK at the Christie in Manchester and UCLH in London, which together aim to treat 1500 patients a year \cite{hep}. 
 
 In the UK, 360,000 cases of cancer were diagnosed in 2015, with only 160,000 cases of survival in the following year \cite{cancerstatistics}. It remains a priority to drastically improve this survival rate as well as to improve the quality of life of patients and survivors.
 
 \subsection{Treatment}
 
-The traditional methods of cancer treatment include surgery, radiotherapy and chemotherapy, the latter two of which are commonly used concurrently as chemo-radiotherapy, which has proven effective when treating many instances of cancer. An example of this can be seen by the considerable increase in survival rates from advanced lung cancer using chemo-radiotherapy \cite{chemoradiotherapy}.
+The traditional methods of cancer treatment include surgery, radiotherapy and chemotherapy, the latter two of which are commonly used concurrently, known as chemo-radiotherapy. This method has proven effective when treating many instances of cancer, an example of which can be seen by the considerable increase in survival rates from advanced lung cancer using chemo-radiotherapy \cite{chemoradiotherapy}.
 
 Chemotherapy involves the regular ingestion of anti-cancer drugs which target the tumour cells. This can inhibit the production of cancer cells, however when acting alone chemotherapy can be limited in its effectiveness due to the development of drug resistance to anti-cancer agents \cite{chemotherapy}. Resistance to these drugs may not be present at the point of diagnosis, but can develop through the process of treatment.
 
@@ -63,7 +64,7 @@ Chemotherapy involves the regular ingestion of anti-cancer drugs which target th
 
 Radiotherapy is a traditional and effective method of cancer treatment where a malignancy is bombarded with ionising radiation, usually high-energy X-ray photons, which aim to induce DNA damage in the tumour cells triggering apoptosis i.e. cell death \cite{apoptosis}. These photons travel through the patient depositing energy in the surrounding tissue, including the otherwise healthy tissue before and after the target tumour. 
 
-X-ray photons travelling through matter lose energy due to processes such as Compton scattering with electrons and Bremsstrahlung via interactions with nuclei. An x-ray beam loses intensity exponentially according to Equation 1 \cite{photon}, where $I_0$ is the initial intensity of the beam and $I(x)$ represents the intensity after the beam travels depth x in material with attenuation coefficient $\mu$.
+X-ray photons travelling through matter lose energy due to processes such as Compton scattering with electrons and Bremsstrahlung via interactions with nuclei. An X-ray beam loses intensity exponentially according to Equation 1 \cite{photon}, where $I_0$ is the initial intensity of the beam and $I(x)$ represents the intensity after the beam travels depth x in material with attenuation coefficient $\mu$.
 
 \begin{equation}
 \begin{centering}
@@ -72,9 +73,9 @@ I(x) = I_0 e^{-\mu x}
 \end{equation}
 
 
-In rarer cases of cancer where the tumour is located in a region of very sensitive tissue such as the brain, eye or spinal cord, traditional, photon-based radiotherapy is unsuitable. The ionising effects of the radiation can affect surrounding healthy tissue. Damaging brain tissue can lead to severe side effects and permanent brain damage or blindness, which is a strong consideration as the victims of these rarer cancers tend to be young children \cite{children}.
+In rarer cases of cancer where the tumour is located in a region of very sensitive tissue such as the brain, eye or spinal cord, traditional, photon-based radiotherapy is unsuitable. The ionising effects of the radiation can affect surrounding healthy tissue, causing devastating side effects which reduce the quality of life of the patient. Damaging brain tissue can lead to severe side effects such as permanent brain damage or blindness, which is a strong consideration as the victims of these rarer cancers tend to be young children \cite{children}.
 
-In this case, proton beam therapy can be administered, a cutting-edge method of cancer treatment based off research used at the frontiers of high-energy physics. This method of therapy is currently delivered by the Clatterbridge Cancer Centre on the Wirral, close to the city of Liverpool, and is the only centre in the UK to offer the service at present time. Other proton therapy centres are under construction both in London \& Manchester which together are estimated to treat 1500 cancer patients a year \cite{hep}.
+In such cases, proton beam therapy can be administered, a cutting-edge method of cancer treatment based off research used at the frontiers of high-energy physics. This method of therapy is currently delivered by the Clatterbridge Cancer Centre on the Wirral, close to the city of Liverpool, and is the only centre in the UK to offer the service at present time. Other proton therapy centres are under construction both in London \& Manchester which together are estimated to treat 1500 cancer patients a year \cite{hep}.
 
 % consider moving above line to beginning
 
@@ -82,7 +83,7 @@ In this case, proton beam therapy can be administered, a cutting-edge method of 
 
 Proton beam therapy consists of bombarding the target tumour with high energy protons, whose ionising effects induce apoptosis similarly to conventional radiotherapy. However, this diverges from conventional radiotherapy by using high energy protons instead of photons to deliver a dose of energy to a target tumour in a sensitive region of tissue. 
 
-Protons are positively charged hadrons, and like all charged particles follow the Bethe equation, shown as Eq. 1 \cite{bethe}, which describes their energy loss as they travel through matter. The main physical mechanism of this loss could be explained here. 
+Protons are positively charged hadrons, and like all charged particles follow the Bethe equation, shown as Eq. 1 \cite{bethe}, which describes their energy loss as they travel through matter.
 
 % BETHE EQUATION
 \begin{equation}
@@ -92,15 +93,31 @@ Protons are positively charged hadrons, and like all charged particles follow th
 \end{split}
 \end{equation}
 
+Here, E is the energy of the particle, x is the depth travelled, K is a constant defined in Eq. 3 \cite{bethe}, z is the charge number of the particle, Z is the atomic number of the material, $\beta$ is the particle velocity as a fraction of the speed of light, c, defined as $\beta = \frac{v}{c}$, $m_e$ is the electron mass, $\gamma$ is the Lorentz factor defined as $\gamma = \frac{1}{\sqrt{1 - \beta^2}}$, I is the mean excitation potential, $W_{max}$ is defined in Eq. 4, and $\delta (\beta \gamma)$ is the density effect correction to ionisation energy loss, generally computed using the Sternheimer's parametrization \cite{bethe}, which has been deferred to the Appendix.
+
+\begin{equation}
+    K = 4 \pi N_A r_e^2 m_e c^2
+\end{equation}
+
+Here, $N_A$ is Avogadro's number, and $r_e$ is the radius of an orbiting electron.
+
+$W_{max}$ is defined here as the maximum energy transfer in a single collision with a particle of mass M.
+
+\begin{equation}
+    W_{max} = \frac{2 m_e c^2 \beta ^2 \gamma ^2}{1 + 2 \gamma m_e / M + (m_e/M)^2}
+\end{equation}
+
+
+
 Radiotherapy protons transfer energy to surrounding tissue through electromagnetic collisions with atomic electrons and also through myriad electromagnetic interactions with atomic nuclei, known as multiple coulomb scattering. Some protons experience hard scatters with the atomic nuclei, resulting in a large scattering angle and their divergence from the main beam of primaries. These scattering interactions can be seen in Figure 1 \cite{radiotherapy1}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth] {primariesvssecondaries.png}
-    \caption{\label{fig:primarysecondary} Illustration of a high energy proton scattering against atoms, where (a) depicts ionisation, (b) coulomb scattering off an atomic nucleus, and (c) a hard scatter resulting in the destruction of a primary and the creation of a secondary proton.}
+    \caption{\label{fig:primarysecondary} Illustration of a high energy proton scattering against atoms, where (a) depicts ionisation, (b) depicts coulomb scattering off an atomic nucleus, and (c) depicts a hard scatter resulting in the destruction of a primary and the creation of a secondary proton.}
 \end{figure}
 
-The Bragg peak arises from Eq. 1 as shown in Figure 2 \cite{Yock2004}, which depicts a sharp deposit of energy as the proton arrives at rest. A significantly larger amount of energy is lost at the Bragg peak compared to before as it travels at a faster velocity. This is compared to a photon which deposits energy as it travels fairly uniformly. This deposit of energy per unit mass is defined as a dose which is delivered to the tumour to kill the malignant cells by ionisation \cite{instrumentation}. Proton beam therapy hence minimises the damage to healthy tissue and deposits the maximum dose to the tumour.
+The Bragg peak arises from Eq. 1 as shown in Figure 2 \cite{Yock2004}, which depicts a sharp deposit of energy as the proton arrives at rest. A significantly larger amount of energy is lost at the Bragg peak compared to before where it travels at a faster velocity. This is compared to a photon which deposits more energy on entry compared to when it reaches the tumour. This deposit of energy per unit mass is defined as a dose which is delivered to the tumour to kill the malignant cells by ionisation \cite{instrumentation}. Figure 2 shows that the entry dose, that is the dose delivered to tissue before the tumour, is considerably less than that of the photon, and the lateral cut-off of the Bragg peak means that there is no exit dose, that is, the dose delivered to tissue after the tumour, as the proton is brought to rest. Proton beam therapy hence minimises the damage to healthy tissue and deposits the maximum dose to the tumour.
 
 \begin{figure}[H]
     \centering
@@ -109,17 +126,26 @@ The Bragg peak arises from Eq. 1 as shown in Figure 2 \cite{Yock2004}, which dep
     \caption{\label{fig:protonvsphoton}The relative dose i.e. the energy lost by the particle against depth in tissue for protons and X-ray photons. A single proton Bragg peak is represented by the grey line, X-rays by the dashed line, and a modified proton beam by the solid black line.}
 \end{figure}
 
-The Bragg peak of a single proton is very sharp, so a combination of protons of varying energies are superposed to form the wider Bragg peak seen in Fig. 2, tailored to larger tumours while keeping the entry dose, defined as the dose delivered before the tumour, relatively low to preserve healthy tissue. In any case, it is more efficient than traditional radiotherapy represented by the 10MV X-rays, which have a larger entry dose than the proton beam.
+The Bragg peak of a single proton is very sharp, so a combination of protons of varying energies can be superposed to form the wider Bragg peak seen in Fig. 2, tailored to larger tumours while keeping the entry dose relatively low to preserve healthy tissue. In any case, it is more efficient than traditional radiotherapy represented by the 10MV X-rays, which have a larger entry dose and exit dose than the proton beam.
 
 
 \subsection{Simulating the Beamline}
 
-The Clatterbridge Cancer Centre offers the only proton therapy in the UK and treats patients from across the UK and mainland Europe. Due to the sharpness of the Bragg peak, it is important that the dose is delivered very accurately and that all uncertainties are minimised, to ensure a large dose isn't accidentally delivered to healthy tissue. 
+The Clatterbridge Cancer Centre offers the only proton therapy service in the UK and treats patients from across the UK and mainland Europe. Due to the sharpness of the Bragg peak, it is important that the dose is delivered very accurately and that all uncertainties are minimised, to ensure a large dose isn't accidentally delivered to healthy tissue. 
 
-Simulating the proton beamline can help achieve this by ensuring correct dose delivery. It can also help those who want to prototype different geometries/setups by simulating the proton beam using research software developed at the forefront of high energy physics research. Software developed by CERN such as Geant4 and BDSIM can show how protons travel and interact with matter, and can prove useful to researchers who wish to model and simulate the Clatterbridge proton therapy beamline.
+Simulating the proton beamline can help achieve this by ensuring correct dose delivery. It can also help those who want to prototype different geometries by simulating the proton beam using research software developed at the forefront of high energy physics research. Software developed by CERN such as Geant4 and BDSIM can show how protons travel and interact with matter, and can prove useful to researchers who wish to model and simulate the Clatterbridge proton therapy beamline.
+
+The proton therapy mechanism at Clatterbridge is made up of three parts: the cyclotron, the magnetic beamline, and the treatment beamline. The cyclotron is the source of the high energy protons, which are essentially hydrogen nuclei. The protons then enter through the magnetic beamline, a complex configuration of magnetic elements which bend the protons towards the treatment beamline. 
+
+The treatment beamline contains a brass stopper, and a collection of brass collimators and tungsten scattering foils which all contribute to producing a wide, homogeneous beam \cite{hep}. These are contained in a vacuum to reduce scattering off air molecules. This beam leads through a dosimetry box before exiting through a brass nozzle and arriving at the patient. The magnetic and treatment beamlines can be modelled virtually using Geant4 and BDSIM in order to run simulations. The patient receiving the treatment may be modelled as a water tank phantom.
+
+\subsection{Geant4 and BDSIM}
+Geant4 is a toolkit written in C++ and developed by CERN which is used in high energy, nuclear and accelerator physics. It simulates the passage of particles through matter by using Monte Carlo methods. 
+
+BDSIM (Beam Delivery Simulation) is a program also written in C++ which utilises the Geant4 toolkit. It simulates the interaction between particles and accelerator materials and components as well as passage of these particles through matter. This can be used to build complex magnetic configurations that are often deployed in particle accelerators and are also seen in the magnetic beamline at Clatterbridge.
 
 
-The proton therapy mechanism at Clatterbridge is made up of three parts: the cyclotron, the magnetic beamline, and the treatment beamline. The cyclotron is the source of the high energy protons, which then enter through the magnetic beamline, a complex configuration of magnetic elements which bend the protons towards the treatment beamline which leads directly to the patient in the treatment room. The magnetic and treatment beamlines can be modelled virtually using Geant4 and BDSIM in order to run simulations. The patient receiveing the treatment may be modelled as a water tank phantom.
+% brief description of therapy beamline?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -127,7 +153,7 @@ The proton therapy mechanism at Clatterbridge is made up of three parts: the cyc
 
 This project aims to continue the work of prior students and colleagues from the UCL HEP group and Clatterbridge Cancer Centre who have worked to establish an efficient methodology for simulating proton beamlines in Geant4/BDSIM by using geometries imported from CAD (computer-aided design) files, prepared by CAD software packages such as Autodesk.
 
-This project will continue and build upon the previous work done by J. Silverman, who was also a part of the UCL HEP proton therapy group and worked on a system to import CAD models from Autodesk Inventor into Geant4 \cite{silverman}. The laborious and inaccessible methods used to convert the CAD files into an appropriate format for Geant4 will be built upon by using newer and simpler methods devised by colleagues. 
+One of these previous students, J. Silverman, who was also a part of the UCL HEP proton therapy group, worked on a system to import CAD models from Autodesk Inventor into Geant4 \cite{silverman}. The laborious and inaccessible methods used to convert the CAD files into an appropriate format for Geant4 will be built upon by using newer and simpler methods devised by colleagues, in order to make the simulation more useable.
 
 % now write about other methods to preserve healthy tissue, papers below
 % http://jgo.amegroups.com/article/view/3448/3924
@@ -135,7 +161,7 @@ This project will continue and build upon the previous work done by J. Silverman
 
 % expand on these studies considerably
 
-Other methods of minimising the dose delivered to healthy tissue were compared to proton therapy by Ling et al. (2015) \cite{ling}, who studied proton therapy and other methods of conventional radiotherapy in the treatment of pancreatic cancer. Traditional, photon-based methods such as 3DCRT (three-dimensional conventional radiotherapy) and IMRT (intensity-modulated radiation therapy) use the superposition of multiple entry beams from different directions, such that the maximum delivered dose made up of all the entry beams lies on the target tumours. This can be seen in Figure 3 compared to proton therapy. 
+Other methods of minimising the dose delivered to healthy tissue were compared to proton therapy by Ling et al. (2015) \cite{ling}, who studied proton therapy and other methods of conventional radiotherapy in the treatment of pancreatic cancer. Traditional photon-based methods such as 3DCRT (three-dimensional conventional radiotherapy) and IMRT (intensity-modulated radiation therapy) use the superposition of multiple entry beams from different directions, such that the maximum delivered dose made up of all the entry beams lies on the target tumours. This can be seen in Figure 3 compared to proton therapy. 
 
 % add entry beams figure here
 \begin{figure}[H]
@@ -164,18 +190,20 @@ Proton therapy also performs better in terms of conformality, defined as the mou
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PROJECT OUTLINE}
 
-This project to simulate the Clatterbridge proton therapy beamline will generally follow the timeline below consisting of main project milestones and a rough timeframe:
+This project is to improve on a simulation of the Clatterbridge proton therapy beamline, to make it more versatile and useable for users who wish to trial new geometries and ensure accurate dose delivery to the patient.
+
+The project will generally follow the timeline below consisting of main project milestones and a rough timeframe:
 
 \begin{enumerate}
-    \item Build and finish the CAD model of the proton therapy beamline using Autodesk Inventor. (November)
-	\item Visit Clatterbridge Cancer Centre to confirm these models and their dimensions. (November)
-	\item Learn BDSIM and Geant4 and familiarise with C++, the language they are written in. (December)
-	\item Learn how to import CAD models into Geant4 using newer methods devised by colleagues. (January)
-	\item Build accelerator beamline of magnetic elements in BDSIM (February)
-    \item Run simulations and compare results to the original Geant4 model for verification. (February/March)
+    \item The CAD models of the proton therapy beamline will be built and then finished using Autodesk Inventor. (November)
+	\item A visit will be made to Clatterbridge Cancer Centre to confirm these models and their dimensions. (November)
+	\item BDSIM and Geant4 will be learnt in order to simulate the beamline. These are written in C++, the syntax of which must also be studied and understood. (December)
+	\item The method for importing CAD models into Geant4 will have to be learnt and then used for importing the Clatterbridge CAD models into BDSIM, using newer methods devised by colleagues. (January)
+	\item The accelerator beamline of magnetic elements will be built in BDSIM. (February)
+    \item Simulations will be run and results will be compared with those from the original model built in Geant4 for verification. (February/March)
 \end{enumerate}
 
-The initial priority will be to visit Clatterbridge, in order to confirm the CAD models are accurate, before moving on to the later stages of the project. Also, a strong emphasis will be put on learning Geant4 and BDSIM for the first stages of the project.
+The initial priority will be to visit Clatterbridge, in order to confirm the CAD models are accurate, before moving on to the later stages of the project. A strong emphasis will be put on learning Geant4 and BDSIM for the first stages of the project.
 
 
 
@@ -194,11 +222,6 @@ The initial priority will be to visit Clatterbridge, in order to confirm the CAD
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section*{APPENDIX}
-
-%An alternative form of Eq. 3 used to calculate the refractive index of paraffin.
-
-%$$ n_1^2 = \frac{1}{\sin^2{\theta}} \Big(1 + \frac{k_x^2 c^2}{(2\pi f)^2}\Big) $$ 
 
 %\section*{ACKNOWLEDGMENT}
 
@@ -208,11 +231,32 @@ The initial priority will be to visit Clatterbridge, in order to confirm the CAD
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
 \bibliographystyle{ieeetr}
 \bibliography{hi.bib}
 
+\newpage
+
+\section*{APPENDIX}
+
+In the Sternheimer parametrization below, k is the Bremsstrahlung photon energy, and $$x = \log{10}(\frac{p}{Mc})$$ where p is the particle momentum, $a$, $x_0$ and $x_1$ are material dependent constraints.
+
+\[
+\delta (\beta \gamma) = 
+\begin{cases}
+2(\ln{10})x - \overline{C}, & \text{if } x \geq x_1 \\
+2(\ln{10})x - \overline{C} + a(x_1 - x)^k, & \text{if } x_0 \leq x < x_0 \\
+0, & \text{if } x < x_0 \\ & \text{\small{ for non-conductors}} \\
+\delta_0 10^{2(x - x_0)}, & \text{if } x < x_0 \\ & \text{ \small{ for conductors}}
+\end{cases}
+\]
+
+$\overline{C}$ is determined by equating the high-energy case of this equation to the following limit.
+
+\begin{equation*}
+\delta/2   \to \ln {\omega_p / I} + \ln{(\beta \gamma)} - 1/2
+\end{equation*}
+
+Here, $\omega_p$ is defined as the plasma frequency: $$ \sqrt{4\pi N_e r_e^3} m_e c^2 / \alpha $$
 
 
 \end{document}
